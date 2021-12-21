@@ -1,3 +1,5 @@
+local ver = "Beta"
+
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 
@@ -236,6 +238,20 @@ lib.createWindow = function(title, name, draggable)
 	Display.ZIndex = 2
 
 	tabholder = Display
+	
+	local Watermark = Instance.new("TextLabel")
+
+	Watermark.Parent = mainframe
+	Watermark.Name = "Watermark"
+	Watermark.Text = "Exam Hub " .. tostring(ver)
+	Watermark.BackgroundTransparency = 1
+	Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Watermark.Position = UDim2.new(0, 0, 0.932, 0)
+	Watermark.Size = UDim2.new(0.2, 0, 0.008, 20)
+	Watermark.TextSize = 9
+	Watermark.ZIndex = 1000000000
+	Watermark.Font = Enum.Font.Gotham
+	Watermark.TextWrapped = true
 	
 	Close.MouseButton1Down:Connect(function()
 		window:Destroy()
