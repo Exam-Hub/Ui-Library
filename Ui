@@ -811,6 +811,7 @@ local function createList(option, parent, holder)
 				end
 			end
 		end)
+		self:Close()
 		
 		label.InputEnded:connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseButton1 then
